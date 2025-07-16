@@ -25,3 +25,25 @@ def count_characters(text):
     return words 
 
 
+
+def sort_on(items):
+    return items["num"]
+
+
+def sorting(characters):
+    char_dicts_list=[]
+    
+    for char, count in characters.items():
+        if char.isalpha():
+            new_item_dict = {"char": char, "num": count}
+            char_dicts_list.append(new_item_dict) 
+        
+        else:
+            pass
+        
+    char_dicts_list.sort(reverse=True, key=sort_on)
+
+    return char_dicts_list
+
+
+
